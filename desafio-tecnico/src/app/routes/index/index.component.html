@@ -1,12 +1,24 @@
 <app-nav-bar></app-nav-bar>
 <div class="container">
   <div class="mainContent">
-    <button>ADICIONAR INDICAÇÕES</button>
+    <a routerLink="cadastro"><button>ADICIONAR INDICAÇÕES</button></a>
     <div class="grid">
-      <app-display-tiles></app-display-tiles>
-      <app-display-tiles></app-display-tiles>
-      <app-display-tiles></app-display-tiles>
-      <app-display-tiles></app-display-tiles>
+      <app-display-tiles class="displayTiles" content="">
+        <b>2</b>
+        <p>INDICAÇÕES SEM CORRETOR</p>
+      </app-display-tiles>
+      <app-display-tiles class="displayTiles"
+        ><b>2</b>
+        <p>INDICAÇÕES SEM CORRETOR</p></app-display-tiles
+      >
+      <app-display-tiles class="displayTiles"
+        ><b>2</b>
+        <p>INDICAÇÕES SEM CORRETOR</p></app-display-tiles
+      >
+      <app-display-tiles class="displayTiles"
+        ><b>2</b>
+        <p>INDICAÇÕES SEM CORRETOR</p></app-display-tiles
+      >
     </div>
     <h3>Indicações</h3>
     <div class="tableContainer">

@@ -36,3 +36,16 @@ h3 {
 .tableContainer {
   margin-left: 75px;
 }
+
+.displayTiles {
+  color: #009e9a;
+}
+
+.displayTiles b {
+  font-size: 54px;
+}
+
+.displayTiles ::ng-deep :hover {
+  background-color: #009e9a;
+  color: white;
+}
