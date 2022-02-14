@@ -1,0 +1,19 @@
+.displayTile {
+  background-color: white;
+  margin-right: 40px;
+  width: 300px;
+
+  border-radius: 8px;
+  box-shadow: 5px 5px 10px #dcdcdc;
+  padding: 10px;
+  padding-left: 20px;
+  color: #009e9a;
+}
+
+.displayTile:hover {
+  background-color: #009e9a;
+  color: white;
+}
+b {
+  font-size: 54px;
+}

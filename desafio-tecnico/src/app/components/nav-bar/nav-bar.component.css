@@ -1,0 +1,17 @@
+a {
+  color: white;
+  background-color: #009e9a;
+  text-decoration: none;
+  font-size: 22px;
+  display: block;
+  padding: 10px;
+  border-bottom: 1px solid #e6e9eb;
+  text-align: center;
+}
+
+div {
+  background-color: #009e9a;
+  height: 100%;
+  width: 280px;
+  float: left;
+}

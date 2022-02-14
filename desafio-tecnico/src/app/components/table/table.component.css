@@ -1,0 +1,27 @@
+.tableHeader {
+  background-color: #343224;
+  color: white;
+  height: 80px;
+}
+
+.tableCb {
+  width: 80px;
+  text-align: center;
+  border: none;
+}
+
+.name {
+  width: 400px;
+}
+
+.corretor {
+  width: 400px;
+}
+
+.status {
+  width: 300px;
+}
+
+.options {
+  width: 300px;
+}
