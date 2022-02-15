@@ -32,5 +32,45 @@ label {
   margin-left: 75px;
 }
 
+.registerTile {
+  display: flex;
+  margin-left: 75px;
+}
+
+.registerForm {
+  display: grid;
+  grid-template-areas: "left right";
+}
+
 .textContainer {
+  color: #343224;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.submit {
+  height: 60px;
+  width: 350px;
+  border-radius: 8px;
+  border-style: hidden;
+  background-color: #009e9a;
+  color: white;
+  font-size: 23px;
+}
+
+.cancel {
+  height: 60px;
+  width: 200px;
+  border-radius: 8px;
+  border-style: hidden;
+  background-color: #cecece;
+  color: #6c6c6c;
+  font-size: 23px;
+}
+.buttonContainer {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
 }

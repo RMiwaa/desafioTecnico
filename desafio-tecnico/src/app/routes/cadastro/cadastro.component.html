@@ -1,16 +1,19 @@
 <app-nav-bar></app-nav-bar>
 <div class="container">
   <div class="mainContent">
-    <a><i class="fa-solid fa-arrow-left"></i>VOLTAR PARA A PÁGINA ANTERIOR</a>
+    <a routerLink=""
+      ><i class="fa-solid fa-arrow-left"></i>VOLTAR PARA A PÁGINA ANTERIOR</a
+    >
     <p class="title"><b>Cadastro de novas indicações</b></p>
-    <app-display-tiles class="registerDisplayTile">
+    <app-display-tiles class="registerTile">
       <p><b>Dados do cliente</b></p>
-      <form method="post">
+      <form method="post" class="registerForm">
         <div class="textContainer">
           <label>Nome Completo</label>
           <input
             type="text"
             placeholder="Digite aqui o nome completo do cliente"
+            size="50"
             [(ngModel)]="inputData.nome"
           />
         </div>
@@ -20,6 +23,7 @@
             type="text"
             placeholder="DDD + Telefone"
             [(ngModel)]="inputData.telefone"
+            size="50"
           />
         </div>
         <div class="textContainer">
@@ -47,8 +51,12 @@
           />
         </div>
       </form>
-      <button class="cancel">CANCELAR</button>
-      <button class="submit">SALVAR E CONTINUAR</button>
+      <div class="buttonContainer">
+        <a routerLink=""><button class="cancel">CANCELAR</button></a>
+        <a routerLink="/detalhes"
+          ><button class="submit">SALVAR E CONTINUAR</button></a
+        >
+      </div>
     </app-display-tiles>
   </div>
 </div>

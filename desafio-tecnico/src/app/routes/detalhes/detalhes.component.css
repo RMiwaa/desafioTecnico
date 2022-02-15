@@ -9,3 +9,16 @@
   margin-left: 280px;
   height: 100%;
 }
+
+.tileContainer {
+  margin-left: 75px;
+  display: grid;
+  grid-template-areas: "left right";
+}
+p {
+  margin-left: 75px;
+}
+.backLink {
+  display: flex;
+  margin-left: 75px;
+}
