@@ -1,35 +1,52 @@
 <app-nav-bar></app-nav-bar>
 <div class="container">
   <div class="mainContent">
-    <a routerLink=""
-      ><i class="fa-solid fa-arrow-left"></i>VOLTAR PARA A PÁGINA ANTERIOR</a
-    >
+    <a><i class="fa-solid fa-arrow-left"></i>VOLTAR PARA A PÁGINA ANTERIOR</a>
     <p class="title"><b>Cadastro de novas indicações</b></p>
     <app-display-tiles class="registerDisplayTile">
       <p><b>Dados do cliente</b></p>
-      <div class="textContainer">
-        <label>Nome Completo</label>
-        <input
-          type="text"
-          placeholder="Digite aqui o nome completo do cliente"
-        />
-      </div>
-      <div class="textContainer">
-        <label>Telefone</label>
-        <input type="text" placeholder="DDD + Telefone" />
-      </div>
-      <div class="textContainer">
-        <label>Empresa - opcional</label>
-        <input type="text" placeholder="Digite aqui o nome da empresa" />
-      </div>
-      <div class="textContainer">
-        <label>E-mail</label>
-        <input type="text" placeholder="Insira aqui o e-mail do cliente" />
-      </div>
-      <div class="textContainer">
-        <label>Corretor</label>
-        <input type="text" placeholder="Digite aqui o nome do corretor" />
-      </div>
+      <form method="post">
+        <div class="textContainer">
+          <label>Nome Completo</label>
+          <input
+            type="text"
+            placeholder="Digite aqui o nome completo do cliente"
+            [(ngModel)]="inputData.nome"
+          />
+        </div>
+        <div class="textContainer">
+          <label>Telefone</label>
+          <input
+            type="text"
+            placeholder="DDD + Telefone"
+            [(ngModel)]="inputData.telefone"
+          />
+        </div>
+        <div class="textContainer">
+          <label>Empresa - opcional</label>
+          <input
+            type="text"
+            placeholder="Digite aqui o nome da empresa"
+            [(ngModel)]="inputData.empresa"
+          />
+        </div>
+        <div class="textContainer">
+          <label>E-mail</label>
+          <input
+            type="text"
+            placeholder="Insira aqui o e-mail do cliente"
+            [(ngModel)]="inputData.email"
+          />
+        </div>
+        <div class="textContainer">
+          <label>Corretor</label>
+          <input
+            type="text"
+            placeholder="Digite aqui o nome do corretor"
+            [(ngModel)]="inputData.corretor"
+          />
+        </div>
+      </form>
       <button class="cancel">CANCELAR</button>
       <button class="submit">SALVAR E CONTINUAR</button>
     </app-display-tiles>

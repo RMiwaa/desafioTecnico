@@ -4,38 +4,16 @@
       <td class="tableCb"><input type="checkbox" /></td>
       <td class="name"><b>NOME</b></td>
       <td class="corretor"><b>CORRETOR/CORRETORA</b></td>
-      <td class="status"><b>STATUS</b>></td>
+      <td class="status"><b>STATUS</b></td>
       <td class="options"></td>
     </tr>
   </thead>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+  <tr *ngFor="let c of clients">
+    <td><input type="checkbox" /></td>
+    <td>{{ c.nome }}</td>
+    <td>{{ c.corretor }}</td>
+    <td>{{ c.status }}</td>
     <td></td>
   </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tfoot>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  </tfoot>
+  <tfoot></tfoot>
 </table>

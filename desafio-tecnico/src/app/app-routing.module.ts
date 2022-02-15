@@ -5,7 +5,7 @@ import { DetalhesComponent } from './routes/detalhes/detalhes.component';
 import { IndexComponent } from './routes/index/index.component';
 
 const routes: Routes = [
-  { path: '', component: IndexComponent },
+  { path: '', component: IndexComponent, pathMatch: 'full' },
   { path: 'cadastro', component: CadastroComponent },
   { path: 'detalhes', component: DetalhesComponent },
 ];
