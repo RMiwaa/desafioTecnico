@@ -1,21 +1,32 @@
 import { Component, OnInit } from '@angular/core';
+import { clientsInterface } from 'src/app/Interfaces/clientsInterface';
 import { ClientsService } from 'src/app/services/clients.service';
 
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.css'],
+  providers: [ClientsService],
 })
 export class TableComponent implements OnInit {
-  clients: Array<any> = new Array();
+  clients!: clientsInterface[];
 
-  constructor(private clientsService: ClientsService) {}
-  ngOnInit(): void {
+  constructor(private clientsService: ClientsService) {
     this.getAllClients();
   }
-  getAllClients() {
-    this.clientsService.getAllClients().subscribe((clients) => {
-      this.clients = clients;
+  ngOnInit(): void {}
+
+  deleteClient(id: number) {
+    this.clientsService.deleteClientbyId(id).subscribe(() => {
+      this.getAllClients();
     });
+  }
+
+  getAllClients() {
+    this.clientsService
+      .getAllClients()
+      .subscribe((data: clientsInterface[]) => {
+        this.clients = data;
+      });
   }
 }

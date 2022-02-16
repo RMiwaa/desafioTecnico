@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { clientsInterface } from 'src/app/Interfaces/clientsInterface';
 import { ClientsService } from 'src/app/services/clients.service';
 
 @Component({
@@ -8,9 +8,12 @@ import { ClientsService } from 'src/app/services/clients.service';
   styleUrls: ['./cadastro.component.css'],
 })
 export class CadastroComponent implements OnInit {
-  inputData: any;
+  inputData = {} as clientsInterface;
 
   constructor(private clientsService: ClientsService) {}
 
   ngOnInit(): void {}
+  postClient(newClient: clientsInterface) {
+    this.clientsService.postClient(newClient).subscribe();
+  }
 }

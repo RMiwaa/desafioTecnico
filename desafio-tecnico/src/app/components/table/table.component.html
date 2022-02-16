@@ -14,8 +14,12 @@
     <td>{{ c.corretor }}</td>
     <td>{{ c.status }}</td>
     <td>
-      <img src="../../../assets/details.png" />
-      <img src="../../../assets/delete.png" />
+      <a [routerLink]="['/detalhes/', c.id]">
+        <img src="../../../assets/details.png"
+      /></a>
+      <a (click)="deleteClient(c.id)">
+        <img src="../../../assets/delete.png" />
+      </a>
     </td>
   </tr>
   <tfoot></tfoot>

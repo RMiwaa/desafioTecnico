@@ -7,7 +7,7 @@ import { IndexComponent } from './routes/index/index.component';
 const routes: Routes = [
   { path: '', component: IndexComponent, pathMatch: 'full' },
   { path: 'cadastro', component: CadastroComponent },
-  { path: 'detalhes', component: DetalhesComponent },
+  { path: 'detalhes/:id', component: DetalhesComponent },
 ];
 
 @NgModule({

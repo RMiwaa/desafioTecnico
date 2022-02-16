@@ -7,7 +7,11 @@
     <p class="title"><b>Cadastro de novas indicações</b></p>
     <app-display-tiles class="registerTile">
       <p><b>Dados do cliente</b></p>
-      <form method="post" class="registerForm">
+      <form
+        (ngSubmit)="postClient(inputData)"
+        #refForm="ngForm"
+        class="registerForm"
+      >
         <div class="textContainer">
           <label>Nome Completo</label>
           <input
@@ -15,6 +19,7 @@
             placeholder="Digite aqui o nome completo do cliente"
             size="50"
             [(ngModel)]="inputData.nome"
+            name="nome"
           />
         </div>
         <div class="textContainer">
@@ -23,6 +28,7 @@
             type="text"
             placeholder="DDD + Telefone"
             [(ngModel)]="inputData.telefone"
+            name="telefone"
             size="50"
           />
         </div>
@@ -32,6 +38,7 @@
             type="text"
             placeholder="Digite aqui o nome da empresa"
             [(ngModel)]="inputData.empresa"
+            name="empresa"
           />
         </div>
         <div class="textContainer">
@@ -40,6 +47,7 @@
             type="text"
             placeholder="Insira aqui o e-mail do cliente"
             [(ngModel)]="inputData.email"
+            name="email"
           />
         </div>
         <div class="textContainer">
@@ -48,15 +56,16 @@
             type="text"
             placeholder="Digite aqui o nome do corretor"
             [(ngModel)]="inputData.corretor"
+            name="corretor"
           />
         </div>
+
+        <div class="buttonContainer">
+          <a routerLink=""><button class="cancel">CANCELAR</button></a>
+
+          ><button type="submit" class="submit">SALVAR E CONTINUAR</button>
+        </div>
       </form>
-      <div class="buttonContainer">
-        <a routerLink=""><button class="cancel">CANCELAR</button></a>
-        <a routerLink="/detalhes"
-          ><button class="submit">SALVAR E CONTINUAR</button></a
-        >
-      </div>
     </app-display-tiles>
   </div>
 </div>

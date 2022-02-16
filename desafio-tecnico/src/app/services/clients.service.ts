@@ -9,7 +9,19 @@ import { Observable } from 'rxjs';
 })
 export class ClientsService {
   constructor(private httpClient: HttpClient) {}
-  getAllClients(): Observable<any> {
-    return this.httpClient.get<clientsInterface>(`${API_PATH}Indicacoes`);
+  getAllClients(): Observable<clientsInterface[]> {
+    return this.httpClient.get<clientsInterface[]>(`${API_PATH}Indicacoes`);
+  }
+  postClient(newClient: clientsInterface): Observable<clientsInterface> {
+    return this.httpClient.post<clientsInterface>(
+      `${API_PATH}Indicacoes`,
+      newClient
+    );
+  }
+  getClientById(id: number): Observable<clientsInterface> {
+    return this.httpClient.get<clientsInterface>(`${API_PATH}Indicacoes/${id}`);
+  }
+  deleteClientbyId(id: number): Observable<any> {
+    return this.httpClient.delete<any>(`${API_PATH}Indicacoes/${id}`);
   }
 }

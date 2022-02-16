@@ -23,7 +23,7 @@ import { ClientsService } from './services/clients.service';
     CadastroComponent,
     DetalhesComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
   providers: [ClientsService, HttpClientModule],
   bootstrap: [AppComponent],
 })
