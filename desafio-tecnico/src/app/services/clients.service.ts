@@ -9,9 +9,9 @@ import { Observable } from 'rxjs';
 })
 export class ClientsService {
   constructor(private httpClient: HttpClient) {}
-  getAllClients(): Observable<clientsInterface[]> {
+  getAllClients(page: number): Observable<clientsInterface[]> {
     return this.httpClient.get<clientsInterface[]>(
-      `${API_PATH}Indicacoes?p=1&l=5`
+      `${API_PATH}Indicacoes?p=${page}&l=5`
     );
   }
   postClient(newClient: clientsInterface): Observable<clientsInterface> {

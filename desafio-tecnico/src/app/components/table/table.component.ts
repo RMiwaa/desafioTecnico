@@ -10,23 +10,32 @@ import { ClientsService } from 'src/app/services/clients.service';
 })
 export class TableComponent implements OnInit {
   clients!: clientsInterface[];
+  page = 1;
 
   constructor(private clientsService: ClientsService) {
-    this.getAllClients();
+    this.getAllClients(this.page);
   }
   ngOnInit(): void {}
 
   deleteClient(id: number) {
     this.clientsService.deleteClientbyId(id).subscribe(() => {
-      this.getAllClients();
+      this.getAllClients(this.page);
     });
   }
 
-  getAllClients() {
+  getAllClients(page: number) {
     this.clientsService
-      .getAllClients()
+      .getAllClients(page)
       .subscribe((data: clientsInterface[]) => {
         this.clients = data;
       });
+  }
+  nextPage() {
+    this.page++;
+    this.getAllClients(this.page);
+  }
+  previousPage() {
+    this.page--;
+    this.getAllClients(this.page);
   }
 }
