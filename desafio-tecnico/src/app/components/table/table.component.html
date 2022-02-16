@@ -1,19 +1,17 @@
 <table>
   <thead class="tableHeader">
-    <tr>
-      <td class="tableCb"><input type="checkbox" /></td>
-      <td class="name"><b>NOME</b></td>
-      <td class="corretor"><b>CORRETOR/CORRETORA</b></td>
-      <td class="status"><b>STATUS</b></td>
-      <td class="options"></td>
-    </tr>
+    <td class="tableCb"><input type="checkbox" /></td>
+    <td class="name"><b>NOME</b></td>
+    <td class="corretor"><b>CORRETOR/CORRETORA</b></td>
+    <td class="status"><b>STATUS</b></td>
+    <td></td>
   </thead>
   <tr *ngFor="let c of clients">
     <td><input type="checkbox" /></td>
     <td>{{ c.nome }}</td>
     <td>{{ c.corretor }}</td>
     <td>{{ c.status }}</td>
-    <td>
+    <td class="options">
       <a [routerLink]="['/detalhes/', c.id]">
         <img src="../../../assets/details.png"
       /></a>
@@ -22,5 +20,11 @@
       </a>
     </td>
   </tr>
-  <tfoot></tfoot>
+  <tfoot>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tfoot>
 </table>

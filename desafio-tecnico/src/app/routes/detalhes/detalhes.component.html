@@ -4,10 +4,55 @@
     <a routerLink="" class="backLink"
       ><i class="fa-solid fa-arrow-left"></i>VOLTAR PARA A PÁGINA ANTERIOR</a
     >
-    <p class="title"><b>detalhes DO CLIENTE</b></p>
+    <p class="title"><b>DETALHES DO CLIENTE</b></p>
     <div class="tileContainer">
-      <app-display-tiles><p></p></app-display-tiles>
-      <app-display-tiles></app-display-tiles>
+      <app-display-tiles>
+        <p class="info"><b>Informações básicas</b></p>
+        <div class="dataContainer">
+          <div>
+            <label>Nome Completo</label>
+            <br />
+            <label
+              ><b>{{ detailedClient.nome }}</b></label
+            >
+          </div>
+          <div>
+            <label>Telefone</label>
+            <br />
+            <label
+              ><b>{{ detailedClient.telefone }}</b></label
+            >
+          </div>
+          <div>
+            <label>E-mail</label>
+            <br />
+            <label
+              ><b>{{ detailedClient.email }}</b></label
+            >
+          </div>
+          <div>
+            <label>Empresa</label>
+            <br />
+            <label
+              ><b>{{ detailedClient.empresa }}</b></label
+            >
+          </div>
+          <div>
+            <label>Corretor</label>
+            <br />
+            <label
+              ><b>{{ detailedClient.corretor }}</b></label
+            >
+          </div>
+        </div>
+      </app-display-tiles>
+      <app-display-tiles>
+        <label><b>Status: </b></label>
+
+        <label
+          ><b>{{ detailedClient.status }}</b></label
+        >
+      </app-display-tiles>
     </div>
   </div>
 </div>

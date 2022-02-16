@@ -1,13 +1,38 @@
+table {
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
 .tableHeader {
   background-color: #343224;
   color: white;
   height: 80px;
 }
 
+tfoot {
+  background-color: #343224;
+  height: 40px;
+}
+
+tr:nth-child(even) {
+  background: #f7f7f7;
+}
+tr:nth-child(odd) {
+  background: #e6e6e6;
+}
+
+tr input,
 .tableCb {
   width: 80px;
   text-align: center;
   border: none;
+}
+
+img {
+  padding: 10px;
+}
+.options {
+  text-align: center;
 }
 
 .name {
@@ -23,5 +48,5 @@
 }
 
 .options {
-  width: 300px;
+  width: 100px;
 }

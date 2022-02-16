@@ -19,6 +19,27 @@ p {
   margin-left: 75px;
 }
 .backLink {
-  display: flex;
+  margin-top: 60px;
   margin-left: 75px;
+  display: flex;
+  text-decoration: none;
+  color: #40cfcb;
+}
+
+.dataContainer {
+  border-top: solid 1px #e6e9eb;
+  display: grid;
+  grid-template-areas: "Left Right";
+}
+.dataContainer div {
+  margin: 10px;
+}
+
+.info {
+  color: #009e9a;
+}
+
+p,
+.dataContainer label {
+  color: #343224;
 }

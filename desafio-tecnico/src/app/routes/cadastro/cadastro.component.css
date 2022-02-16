@@ -15,7 +15,7 @@
   margin-left: 75px;
 }
 
-a {
+.backLink {
   margin-top: 60px;
   margin-left: 75px;
   display: flex;
@@ -44,10 +44,17 @@ label {
 
 .textContainer {
   color: #343224;
-  padding: 30px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   position: relative;
+}
+
+.textContainer input {
+  margin-top: 5px;
+  height: 30px;
+  border-radius: 5px;
+  border-color: #e6e9eb;
 }
 
 .submit {
@@ -68,9 +75,13 @@ label {
   background-color: #cecece;
   color: #6c6c6c;
   font-size: 23px;
+  margin-right: 50px;
 }
+
 .buttonContainer {
   padding: 30px;
+  margin-top: 90px;
   display: flex;
   justify-content: space-between;
+  margin-left: -450px;
 }
